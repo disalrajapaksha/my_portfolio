@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MapPin, GraduationCap, Mail } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -102,8 +103,14 @@ export default function Hero() {
                 }}
                 className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-400 via-cyan-400 to-blue-600 shadow-2xl flex items-center justify-center"
               >
-                <div className="w-56 h-56 sm:w-72 sm:h-72 lg:w-88 lg:h-88 rounded-full bg-slate-100 flex items-center justify-center text-8xl sm:text-9xl font-bold text-slate-300">
-                  DR
+                <div className="w-56 h-56 sm:w-72 sm:h-72 lg:w-88 lg:h-88 rounded-full overflow-hidden relative border-4 border-white shadow-inner">
+                  <Image
+                    src="/images/profile.jpeg"
+                    alt="Disal Ransika"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </motion.div>
               <motion.div

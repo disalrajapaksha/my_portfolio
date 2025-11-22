@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Award, Calendar } from 'lucide-react';
 import { certificates } from '@/lib/data';
@@ -51,27 +52,39 @@ export default function Certificates() {
               key={cert.id}
               variants={item}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              className="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow"
+              className="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col h-full"
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="p-3 bg-blue-100 rounded-lg">
-                  <Award className="text-blue-600" size={24} />
+              {cert.image && (
+                <div className="relative h-48 w-full border-b border-slate-100">
+                  <Image
+                    src={cert.image}
+                    alt={cert.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-slate-900 mb-1">
-                    {cert.title}
-                  </h3>
-                  <p className="text-sm font-medium text-blue-600">{cert.issuer}</p>
+              )}
+              <div className="p-6 flex flex-col flex-1">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="p-3 bg-blue-100 rounded-lg shrink-0">
+                    <Award className="text-blue-600" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-slate-900 mb-1">
+                      {cert.title}
+                    </h3>
+                    <p className="text-sm font-medium text-blue-600">{cert.issuer}</p>
+                  </div>
                 </div>
-              </div>
 
-              <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                {cert.description}
-              </p>
+                <p className="text-slate-600 text-sm mb-4 leading-relaxed flex-1">
+                  {cert.description}
+                </p>
 
-              <div className="flex items-center gap-2 text-slate-500 text-sm">
-                <Calendar size={16} />
-                <span>{cert.date}</span>
+                <div className="flex items-center gap-2 text-slate-500 text-sm mt-auto">
+                  <Calendar size={16} />
+                  <span>{cert.date}</span>
+                </div>
               </div>
             </motion.div>
           ))}

@@ -50,19 +50,22 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-lg text-slate-600 leading-relaxed"
+              className="text-lg text-slate-600 leading-relaxed space-y-4"
             >
-              Passionate technology enthusiast and aspiring software engineer dedicated to
-              transforming innovative ideas into impactful solutions. Currently pursuing my
-              degree in Industrial Information Technology, I blend technical expertise with
-              creative problem-solving to build meaningful digital experiences. With a strong
-              foundation in modern web technologies and a commitment to continuous learning,
-              I'm eager to contribute to projects that make a difference.
-            </motion.p>
+              <p>
+                 I'm Disal Ransika Rajapaksha, a dedicated and creative web developer with a strong passion for crafting responsive, user-friendly websites. I love transforming ideas into smooth digital experiences through clean coding and thoughtful design.
+              </p>
+              <p>
+                My core skills include HTML, CSS, JavaScript, and PHP, and I'm constantly learning new technologies to stay updated with modern development trends. Whether I'm building a site from the ground up or enhancing an existing one, I always aim for high performance, quality, and usability.
+              </p>
+              <p>
+                When I'm not coding, you'll find me exploring new knowledge, keeping up with tech innovations, or drawing inspiration from nature and music. I'm always interested in new challenges and collaborations—feel free to connect anytime!
+              </p>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -103,7 +106,7 @@ export default function Hero() {
                 }}
                 className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-400 via-cyan-400 to-blue-600 shadow-2xl flex items-center justify-center"
               >
-                <div className="w-56 h-56 sm:w-72 sm:h-72 lg:w-88 lg:h-88 rounded-full overflow-hidden relative border-4 border-white shadow-inner">
+                <div className="w-[94%] h-[94%] rounded-full overflow-hidden relative border-4 border-white shadow-inner">
                   <Image
                     src="/images/profile.jpeg"
                     alt="Disal Ransika"

@@ -68,7 +68,7 @@ export default function Contact() {
               </h3>
               <div className="space-y-4">
                 <a
-                  href="mailto:disal.rajapaksha@example.com"
+                  href="mailto:disalrajapaksha@gmail.com"
                   className="flex items-center gap-4 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors group"
                 >
                   <div className="p-3 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors">
@@ -77,13 +77,13 @@ export default function Contact() {
                   <div>
                     <p className="text-sm text-slate-500 mb-1">Email</p>
                     <p className="text-slate-900 font-medium">
-                      disal.rajapaksha@example.com
+                      disalrajapaksha@gmail.com
                     </p>
                   </div>
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/disal-rajapaksha"
+                  href="http://linkedin.com/in/disal-rajapaksha-7234a3310"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors group"

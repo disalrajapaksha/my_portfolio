@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Code } from 'lucide-react';
+import Image from 'next/image';
 import { academicProjects, personalProjects } from '@/lib/data';
 
 const container = {
@@ -27,6 +28,7 @@ interface ProjectCardProps {
     techStack: string[];
     github: string;
     demo: string;
+    image?: string;
   };
 }
 
@@ -35,47 +37,59 @@ function ProjectCard({ project }: ProjectCardProps) {
     <motion.div
       variants={item}
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
-      className="bg-white border border-slate-200 rounded-xl p-6 shadow-md hover:shadow-2xl transition-all"
+      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all flex flex-col h-full"
     >
-      <div className="flex items-start gap-3 mb-4">
-        <div className="p-2 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
-          <Code className="text-white" size={20} />
+      {project.image && (
+        <div className="relative h-48 w-full overflow-hidden">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+          />
         </div>
-        <h3 className="text-xl font-semibold text-slate-900 flex-1">{project.title}</h3>
-      </div>
+      )}
+      <div className="p-6 flex flex-col flex-1">
+        <div className="flex items-start gap-3 mb-4">
+          <div className="p-2 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg shrink-0">
+            <Code className="text-white" size={20} />
+          </div>
+          <h3 className="text-xl font-semibold text-slate-900">{project.title}</h3>
+        </div>
 
-      <p className="text-slate-600 mb-4 leading-relaxed">{project.description}</p>
+        <p className="text-slate-600 mb-4 leading-relaxed flex-1">{project.description}</p>
 
-      <div className="flex flex-wrap gap-2 mb-4">
-        {project.techStack.map((tech) => (
-          <span
-            key={tech}
-            className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.techStack.map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex gap-3 mt-auto">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors text-sm font-medium"
           >
-            {tech}
-          </span>
-        ))}
-      </div>
-
-      <div className="flex gap-3">
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors text-sm font-medium"
-        >
-          <Github size={16} />
-          Code
-        </a>
-        <a
-          href={project.demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-sm font-medium"
-        >
-          <ExternalLink size={16} />
-          Demo
-        </a>
+            <Github size={16} />
+            Code
+          </a>
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-sm font-medium"
+          >
+            <ExternalLink size={16} />
+            Demo
+          </a>
+        </div>
       </div>
     </motion.div>
   );

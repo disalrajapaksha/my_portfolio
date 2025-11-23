@@ -76,6 +76,15 @@ export const certificates = [
 export const academicProjects = [
   {
     id: 1,
+    title: 'TerraFlow',
+    description: 'Full-stack supply chain management system for clay product manufacturing businesses. Features end-to-end operations management, smart production recommendations powered by real-time data, inventory tracking, and secure Stripe payment integration.',
+    techStack: ['React.js', 'Node.js', 'PHP', 'MySQL', 'Stripe'],
+    github: 'https://github.com/username/terraflow',
+    demo: 'https://terraflow.com',
+    image: '/images/terraflow.jpg',
+  },
+  {
+    id: 2,
     title: 'StayFinder',
     description: 'A web-based application designed to make finding and reserving boarding accommodations easier for university students. Features user registration, advanced search, reviews, and automated notifications.',
     techStack: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
@@ -84,7 +93,7 @@ export const academicProjects = [
     image: '/images/stayfinder.jpg',
   },
   {
-    id: 2,
+    id: 3,
     title: 'E-Commerce Platform',
     description: 'Full-featured online shopping platform with payment integration, inventory management, and user authentication.',
     techStack: ['React', 'Node.js', 'MongoDB', 'Stripe'],
@@ -92,7 +101,7 @@ export const academicProjects = [
     demo: 'https://demo-ecommerce.com',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Student Management System',
     description: 'Comprehensive system for managing student records, attendance, grades, and course enrollment.',
     techStack: ['Next.js', 'PostgreSQL', 'Prisma', 'TypeScript'],
@@ -100,7 +109,7 @@ export const academicProjects = [
     demo: 'https://demo-sms.com',
   },
   {
-    id: 4,
+    id: 5,
     title: 'IoT Smart Home Dashboard',
     description: 'Real-time monitoring and control interface for IoT devices with data visualization and automation rules.',
     techStack: ['React', 'Firebase', 'MQTT', 'Chart.js'],

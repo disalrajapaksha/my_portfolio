@@ -15,14 +15,7 @@ export const certificates = [
     description: 'Exploring the potential of AI to address social challenges and drive positive change.',
     image: '/images/certificates/ai-social-impact.jpg',
   },
-  {
-    id: 3,
-    title: 'Project Management Foundations',
-    issuer: 'LinkedIn Learning',
-    date: '2025',
-    description: 'Core principles of project management, including planning, execution, and team leadership.',
-    image: '/images/certificates/project-management.png',
-  },
+
   {
     id: 4,
     title: 'Cloud Computing Webinar',

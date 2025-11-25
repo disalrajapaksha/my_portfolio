@@ -144,4 +144,13 @@ export const personalProjects = [
     github: 'https://github.com/username/portfolio-builder',
     demo: 'https://demo-portfolio.com',
   },
+  {
+    id: 5,
+    title: 'Supermarket POS',
+    description: 'A comprehensive Point of Sale system for supermarkets, featuring inventory management, sales tracking, and reporting.',
+    techStack: ['Node.js', 'Express', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+    github: '#',
+    demo: '#',
+    image: '/supermarket-pos.png',
+  },
 ];

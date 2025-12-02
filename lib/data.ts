@@ -153,4 +153,13 @@ export const personalProjects = [
     demo: '#',
     image: '/supermarket-pos.png',
   },
+  {
+    id: 6,
+    title: 'Sarasavi Alawisala',
+    description: 'A modern e-commerce platform for the Main Students\' Union at Uva Wellassa University. Your one-stop shop for quality products at university.',
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    github: '#',
+    demo: '#',
+    image: '/sarasavi-alawisala.png',
+  },
 ];

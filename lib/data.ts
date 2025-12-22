@@ -64,6 +64,22 @@ export const certificates = [
     description: 'The art of crafting effective prompts to guide AI models and optimize outputs.',
     image: '/images/certificates/prompt-engineering.jpg',
   },
+  {
+    id: 10,
+    title: 'Project Management Foundations',
+    issuer: 'LinkedIn Learning',
+    date: '2025',
+    description: 'Foundational knowledge of project management principles, methodologies, and the project lifecycle.',
+    image: '/images/certificates/project-management-foundations.png',
+  },
+  {
+    id: 11,
+    title: 'SAP ERP Essential Training',
+    issuer: 'LinkedIn Learning',
+    date: '2024',
+    description: 'Comprehensive overview of SAP ERP systems, business processes, and navigation within the SAP environment.',
+    image: '/images/certificates/sap-erp-essential.png',
+  },
 ];
 
 export const academicProjects = [
